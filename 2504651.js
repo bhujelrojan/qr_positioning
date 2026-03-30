@@ -19,13 +19,26 @@ function startScanner() {
         { facingMode: "environment" },
         {},
         function (text) {
-            const place = JSON.parse(text);
-            showMarkerAt(place.top, place.left);
+            const item = JSON.parse(text);
+
+            // Show marker (keep existing functionality)
+            showMarkerAt(item.top, item.left);
+
+            // Show inventory info
+            displayItemInfo(item);
+
             toggleScanner();
         }
     ).catch(function (err) {
         console.error(err);
     });
+}
+
+
+function displayItemInfo(item) {
+    name.innerText = "Name: " + item.name;
+    inStore.innerText = "In store: " + (item.in_store ? "Yes" : "No");
+    price.innerText = "Price: €" + item.price;
 }
 
 function stopScanner() {
