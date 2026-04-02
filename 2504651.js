@@ -22,7 +22,7 @@ function startScanner() {
             const item = JSON.parse(text);
 
             // Show marker (keep existing functionality)
-            showMarkerAt(item.top, item.left);
+            showMarkerAt(item.top, item.left,place.name,place.latitude,place.longitude);
 
             // Show inventory info
             displayItemInfo(item);
@@ -35,11 +35,7 @@ function startScanner() {
 }
 
 
-function displayItemInfo(item) {
-    name.innerText = "Name: " + item.name;
-    inStore.innerText = "In store: " + (item.in_store ? "Yes" : "No");
-    price.innerText = "Price: €" + item.price;
-}
+
 
 function stopScanner() {
     reader.stop();
