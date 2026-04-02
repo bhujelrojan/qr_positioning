@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Positioning</title>
-    <link rel="stylesheet" href="2504651.css" />
+    <link rel = "stylesheet" href = "2504651.css"/>
 </head>
 <body>
     <h1>QR Positioning</h1>
     <div id="mapContainer">
-        <img src="map.png" id="map" alt="map" />
-        <div id="marker"></div>
+        <img src = "map.png" id = "map" alt="Map"/>
+        <div id ="marker"></div>
     </div>
-    <button id="btn" onclick="toggleScanner()">SCAN</button>
-
+    <button id = "btn" onclick = "toggleScanner()">SCAN</button>
+    <div id="itemInfo">
+        <p id="itemName"></p>
+        <p id="itemLatitude"></p>
+        <p id="itemLongitude"></p>
+    </div>
     <div id="camera"></div>
-    <div id="info">
-    <p id="name"></p>
-    <p id="latitude"></p>
-    <p id="longitude"></p>
-</div>
-
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script src="2504651.js"></script>
 </body>
 </html>
+
